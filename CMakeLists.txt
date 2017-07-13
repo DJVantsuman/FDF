@@ -13,6 +13,7 @@ set(SOURCE_FILES
         libft/ft_strdup.c
         libft/ft_strlen.c
         libft/ft_strsub.c
-        )
+        libft/ft_atoi.c
+        libft/ft_atoi_base.c write_line.c create_image.c create_3dmap.c)
 
-add_executable(FdF ${SOURCE_FILES})
+add_executable(FdF ${SOURCE_FILES} libft/ft_atoi_base.c write_line.c create_image.c)

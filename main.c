@@ -12,41 +12,83 @@
 
 #include "fdf.h"
 
-static int	ft_inbase(char c, int base)
+char    *get_pixel_color(char *s)
 {
-    if (base <= 10)
-        return (c >= '0' && c <= '9');
-    return ((c >= '0' && c <= '9') || (c >= 'A' && c <= ('A' + base - 10)));
-}
+    int     i;
+    int     j;
+    char    *color;
 
-int	ft_atoi_base(char *str, int base)
-{
-    int	value;
-    int	sign;
-
-    value = 0;
-    if (base <= 1 || base > 36)
-        return (0);
-    while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\f'
-           || *str == '\r' || *str == '\v')
-        str++;
-    sign = (*str == '-') ? -1 : 1;
-    if (*str == '-' || *str == '+')
-        str++;
-    while (ft_inbase(*str, base))
+    i = 0;
+    j = 0;
+    color = (char *)malloc(sizeof(char) * 7);
+    while (s[i] != 'x' && s[i] != ' ' && s[i] != '\0')
+        i++;
+    if (s[i] == ' ' || s[i] == '\0')
+        return (NULL);
+    i++;
+    while (s[i] != ' ' && s[i] != '\0')
     {
-        if (*str - 'A' >= 0)
-            value = value * base + (*str - 'A' + 10);
-        else
-            value = value * base + (*str - '0');
-        str++;
+        color[j] = s[i];
+        i++;
+        j++;
     }
-    return (value * sign);
+    color[j] = '\0';
+    return (color);
 }
 
-void    create_struct(t_pixel **pixel, char **map)
+void    create_struct(t_pixel **pixel, char **map, int i, int t)
 {
+    int x;
+    int j;
 
+    while (map[i])
+    {
+        x = 0;
+        j = 0;
+        while (map[i][j])
+        {
+            pixel[t] = (t_pixel *)malloc(sizeof(t_pixel));
+            pixel[t]->x = x;
+            pixel[t]->y = i;
+            pixel[t]->z = -ft_atoi(map[i] + j) * Z;
+            pixel[t]->color = get_pixel_color(map[i] + j);
+            x++;
+            t++;
+            while (map[i][j] != ' ' && map[i][j] != '\0')
+                j++;
+            if (map[i][j] == '\0')
+                break ;
+            while (map[i][j] == ' ')
+                j++;
+        }
+        i++;
+    }
+}
+
+int     count_pixels(char **map)
+{
+    int count;
+    int i;
+    int j;
+
+    i = 0;
+    count = 0;
+    while (map[i])
+    {
+        j = 0;
+        while (map[i][j])
+        {
+            count++;
+            while (map[i][j] != ' ' && map[i][j] != '\0')
+                j++;
+            if (map[i][j] == '\0')
+                break ;
+            while (map[i][j] == ' ')
+                j++;
+        }
+        i++;
+    }
+    return (count);
 }
 
 void    write_map(char ***map, char *file)
@@ -80,29 +122,37 @@ void    write_map(char ***map, char *file)
 
 int     main(int ac, char **av)
 {
-    char **map;
-    t_pixel *pixel;
+    int     l;
+    char    **map;
+    t_pixel **pixel;
 
     map = NULL;
-    pixel = 0;
     if (ac == 2)
     {
         write_map(&map, av[1]);
-        create_struct(&pixel, map);
-    }
-    else
+        l = count_pixels(map);
+        printf("%d\n", l);
+        pixel = (t_pixel **)malloc(sizeof(t_pixel *) * (l + 1));
+        pixel[l] = NULL;
+        create_struct(pixel, map, 0, 0);
+        create_image(pixel, map);
+    } else
         write(1, "ERROR: not valid file.\n", 23);
 
 
-    ////////////////////////////////
+
+
+
     int i = 0;
-    while (map[i])
+    while (pixel[i])
     {
-        printf("%s\n", map[i]);
+        printf("pixel %d: x = %d, y = %d, z = %d, color = %s\n", i, pixel[i]->x, pixel[i]->y, pixel[i]->z, pixel[i]->color);
         i++;
     }
-	return (1);
+
+	return (0);
 }
+
 
 /*
 int ft_exit(int keycode)

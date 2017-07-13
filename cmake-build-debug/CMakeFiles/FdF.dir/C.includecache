@@ -6,10 +6,20 @@
 
 #IncludeRegexTransform: 
 
+/nfs/2016/i/itsuman/cursus_42/FdF/create_3dmap.c
+fdf.h
+/nfs/2016/i/itsuman/cursus_42/FdF/fdf.h
+
+/nfs/2016/i/itsuman/cursus_42/FdF/create_image.c
+fdf.h
+/nfs/2016/i/itsuman/cursus_42/FdF/fdf.h
+
 /nfs/2016/i/itsuman/cursus_42/FdF/fdf.h
 mlx.h
 -
 stdlib.h
+-
+math.h
 -
 stdio.h
 -
@@ -33,6 +43,12 @@ unistd.h
 -
 libft/libft.h
 /nfs/2016/i/itsuman/cursus_42/FdF/libft/libft.h
+
+/nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_atoi.c
+libft.h
+/nfs/2016/i/itsuman/cursus_42/FdF/libft/libft.h
+
+/nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_atoi_base.c
 
 /nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_strchr.c
 
@@ -69,6 +85,10 @@ stdlib.h
 -
 
 /nfs/2016/i/itsuman/cursus_42/FdF/main.c
+fdf.h
+/nfs/2016/i/itsuman/cursus_42/FdF/fdf.h
+
+/nfs/2016/i/itsuman/cursus_42/FdF/write_line.c
 fdf.h
 /nfs/2016/i/itsuman/cursus_42/FdF/fdf.h
 
