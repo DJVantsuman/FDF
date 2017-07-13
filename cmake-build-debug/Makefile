@@ -177,6 +177,33 @@ create_image.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/create_image.c.s
 .PHONY : create_image.c.s
 
+get_color.o: get_color.c.o
+
+.PHONY : get_color.o
+
+# target to build an object file
+get_color.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/get_color.c.o
+.PHONY : get_color.c.o
+
+get_color.i: get_color.c.i
+
+.PHONY : get_color.i
+
+# target to preprocess a source file
+get_color.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/get_color.c.i
+.PHONY : get_color.c.i
+
+get_color.s: get_color.c.s
+
+.PHONY : get_color.s
+
+# target to generate assembly for a file
+get_color.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/get_color.c.s
+.PHONY : get_color.c.s
+
 get_next_line.o: get_next_line.c.o
 
 .PHONY : get_next_line.o
@@ -284,6 +311,33 @@ libft/ft_strchr.s: libft/ft_strchr.c.s
 libft/ft_strchr.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/libft/ft_strchr.c.s
 .PHONY : libft/ft_strchr.c.s
+
+libft/ft_strcpy.o: libft/ft_strcpy.c.o
+
+.PHONY : libft/ft_strcpy.o
+
+# target to build an object file
+libft/ft_strcpy.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/libft/ft_strcpy.c.o
+.PHONY : libft/ft_strcpy.c.o
+
+libft/ft_strcpy.i: libft/ft_strcpy.c.i
+
+.PHONY : libft/ft_strcpy.i
+
+# target to preprocess a source file
+libft/ft_strcpy.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/libft/ft_strcpy.c.i
+.PHONY : libft/ft_strcpy.c.i
+
+libft/ft_strcpy.s: libft/ft_strcpy.c.s
+
+.PHONY : libft/ft_strcpy.s
+
+# target to generate assembly for a file
+libft/ft_strcpy.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/libft/ft_strcpy.c.s
+.PHONY : libft/ft_strcpy.c.s
 
 libft/ft_strdel.o: libft/ft_strdel.c.o
 
@@ -516,6 +570,9 @@ help:
 	@echo "... create_image.o"
 	@echo "... create_image.i"
 	@echo "... create_image.s"
+	@echo "... get_color.o"
+	@echo "... get_color.i"
+	@echo "... get_color.s"
 	@echo "... get_next_line.o"
 	@echo "... get_next_line.i"
 	@echo "... get_next_line.s"
@@ -528,6 +585,9 @@ help:
 	@echo "... libft/ft_strchr.o"
 	@echo "... libft/ft_strchr.i"
 	@echo "... libft/ft_strchr.s"
+	@echo "... libft/ft_strcpy.o"
+	@echo "... libft/ft_strcpy.i"
+	@echo "... libft/ft_strcpy.s"
 	@echo "... libft/ft_strdel.o"
 	@echo "... libft/ft_strdel.i"
 	@echo "... libft/ft_strdel.s"

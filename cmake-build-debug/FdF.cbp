@@ -88,6 +88,9 @@
 		<Unit filename="/nfs/2016/i/itsuman/cursus_42/FdF/create_image.c">
 			<Option target="FdF"/>
 		</Unit>
+		<Unit filename="/nfs/2016/i/itsuman/cursus_42/FdF/get_color.c">
+			<Option target="FdF"/>
+		</Unit>
 		<Unit filename="/nfs/2016/i/itsuman/cursus_42/FdF/get_next_line.c">
 			<Option target="FdF"/>
 		</Unit>
@@ -101,6 +104,9 @@
 			<Option target="FdF"/>
 		</Unit>
 		<Unit filename="/nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_strchr.c">
+			<Option target="FdF"/>
+		</Unit>
+		<Unit filename="/nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_strcpy.c">
 			<Option target="FdF"/>
 		</Unit>
 		<Unit filename="/nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_strdel.c">

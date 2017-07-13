@@ -12,7 +12,7 @@
 
 #include "fdf.h"
 
-char    *get_pixel_color(char *s)
+void    get_pixel_color(char *s, t_pixel *pixel)
 {
     int     i;
     int     j;
@@ -24,7 +24,12 @@ char    *get_pixel_color(char *s)
     while (s[i] != 'x' && s[i] != ' ' && s[i] != '\0')
         i++;
     if (s[i] == ' ' || s[i] == '\0')
-        return (NULL);
+    {
+        pixel->col_R = 0;
+        pixel->col_G = 0;
+        pixel->col_B = 0;
+        return ;
+    }
     i++;
     while (s[i] != ' ' && s[i] != '\0')
     {
@@ -33,7 +38,8 @@ char    *get_pixel_color(char *s)
         j++;
     }
     color[j] = '\0';
-    return (color);
+    get_color(color, pixel);
+    printf("1\n");
 }
 
 void    create_struct(t_pixel **pixel, char **map, int i, int t)
@@ -51,7 +57,8 @@ void    create_struct(t_pixel **pixel, char **map, int i, int t)
             pixel[t]->x = x;
             pixel[t]->y = i;
             pixel[t]->z = -ft_atoi(map[i] + j) * Z;
-            pixel[t]->color = get_pixel_color(map[i] + j);
+            get_pixel_color(map[i] + j, pixel[t]);
+//            pixel[t]->color = get_pixel_color(map[i] + j);
             x++;
             t++;
             while (map[i][j] != ' ' && map[i][j] != '\0')
@@ -131,7 +138,6 @@ int     main(int ac, char **av)
     {
         write_map(&map, av[1]);
         l = count_pixels(map);
-        printf("%d\n", l);
         pixel = (t_pixel **)malloc(sizeof(t_pixel *) * (l + 1));
         pixel[l] = NULL;
         create_struct(pixel, map, 0, 0);
@@ -143,12 +149,12 @@ int     main(int ac, char **av)
 
 
 
-    int i = 0;
-    while (pixel[i])
-    {
-        printf("pixel %d: x = %d, y = %d, z = %d, color = %s\n", i, pixel[i]->x, pixel[i]->y, pixel[i]->z, pixel[i]->color);
-        i++;
-    }
+//    int i = 0;
+//    while (pixel[i])
+//    {
+//        printf("pixel %d: x = %d, y = %d, z = %d, color = %s\n", i, pixel[i]->x, pixel[i]->y, pixel[i]->z, pixel[i]->color);
+//        i++;
+//    }
 
 	return (0);
 }

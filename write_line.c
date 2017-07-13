@@ -25,7 +25,7 @@ void    write_line_1(t_pixel *start, t_pixel *end, t_win wind, int nbr[])
     d2 = (nbr[1] - nbr[0]) << 1;
     x = start->x1;
     y = start->y1;
-    mlx_pixel_put(wind.mlx, wind.win, x , y, 0xffffff);
+    mlx_pixel_put(wind.mlx, wind.win, x , y, (end->col_R, end->col_G, end->col_B));
     x = start->x1 + nbr[2];
     while (nbr[4] <= nbr[0])
     {
@@ -36,7 +36,7 @@ void    write_line_1(t_pixel *start, t_pixel *end, t_win wind, int nbr[])
         }
         else
             d += d1;
-        mlx_pixel_put(wind.mlx, wind.win, x , y, 0xffffff);
+        mlx_pixel_put(wind.mlx, wind.win, x , y, (end->col_R, end->col_G, end->col_B));
         nbr[4]++;
         x += nbr[2];
     }
@@ -55,7 +55,7 @@ void    write_line_2(t_pixel *start, t_pixel *end, t_win wind, int nbr[])
     d2 = (nbr[0] - nbr[1]) << 1;
     x = start->x1;
     y = start->y1;
-    mlx_pixel_put(wind.mlx, wind.win, x , y, 0xffffff);
+    mlx_pixel_put(wind.mlx, wind.win, x , y, (start->col_R, start->col_G, start->col_B));
     y = start->y1 + nbr[3];
     while (nbr[4] <= nbr[1])
     {
@@ -66,7 +66,7 @@ void    write_line_2(t_pixel *start, t_pixel *end, t_win wind, int nbr[])
         }
         else
             d += d1;
-        mlx_pixel_put(wind.mlx, wind.win, x , y, 0xffffff);
+        mlx_pixel_put(wind.mlx, wind.win, x , y, (start->col_R, start->col_G, start->col_B));
         nbr[4]++;
         y += nbr[3];
     }

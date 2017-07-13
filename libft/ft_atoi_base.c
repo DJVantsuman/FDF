@@ -23,7 +23,7 @@ int	ft_atoi_base(char *str, int base)
     int	f;
 
     value = 0;
-    if (base <= 1 || base > 36)
+    if (base <= 1 || base > 16)
         return (0);
     f = (*str == '-') ? -1 : 1;
     if (*str == '-' || *str == '+')

@@ -12,7 +12,8 @@
 
 NAME =	FdF
 FLAGS = -Wall -Werror -Wextra
-SRC = main.c get_next_line.c create_image.c write_line.c create_3dmap.c
+SRC = main.c get_next_line.c create_image.c write_line.c create_3dmap.c \
+get_color.c
 OSRC =	$(SRC:.c=.o)
 
 all: $(NAME)

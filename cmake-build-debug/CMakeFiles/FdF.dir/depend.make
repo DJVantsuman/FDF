@@ -9,6 +9,10 @@ CMakeFiles/FdF.dir/create_image.c.o: ../create_image.c
 CMakeFiles/FdF.dir/create_image.c.o: ../fdf.h
 CMakeFiles/FdF.dir/create_image.c.o: ../libft/libft.h
 
+CMakeFiles/FdF.dir/get_color.c.o: ../fdf.h
+CMakeFiles/FdF.dir/get_color.c.o: ../get_color.c
+CMakeFiles/FdF.dir/get_color.c.o: ../libft/libft.h
+
 CMakeFiles/FdF.dir/get_next_line.c.o: ../get_next_line.c
 CMakeFiles/FdF.dir/get_next_line.c.o: ../get_next_line.h
 CMakeFiles/FdF.dir/get_next_line.c.o: ../libft/libft.h
@@ -19,6 +23,8 @@ CMakeFiles/FdF.dir/libft/ft_atoi.c.o: ../libft/libft.h
 CMakeFiles/FdF.dir/libft/ft_atoi_base.c.o: ../libft/ft_atoi_base.c
 
 CMakeFiles/FdF.dir/libft/ft_strchr.c.o: ../libft/ft_strchr.c
+
+CMakeFiles/FdF.dir/libft/ft_strcpy.c.o: ../libft/ft_strcpy.c
 
 CMakeFiles/FdF.dir/libft/ft_strdel.c.o: ../libft/ft_strdel.c
 

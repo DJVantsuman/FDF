@@ -6,10 +6,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2016/i/itsuman/cursus_42/FdF/create_3dmap.c" "/nfs/2016/i/itsuman/cursus_42/FdF/cmake-build-debug/CMakeFiles/FdF.dir/create_3dmap.c.o"
   "/nfs/2016/i/itsuman/cursus_42/FdF/create_image.c" "/nfs/2016/i/itsuman/cursus_42/FdF/cmake-build-debug/CMakeFiles/FdF.dir/create_image.c.o"
+  "/nfs/2016/i/itsuman/cursus_42/FdF/get_color.c" "/nfs/2016/i/itsuman/cursus_42/FdF/cmake-build-debug/CMakeFiles/FdF.dir/get_color.c.o"
   "/nfs/2016/i/itsuman/cursus_42/FdF/get_next_line.c" "/nfs/2016/i/itsuman/cursus_42/FdF/cmake-build-debug/CMakeFiles/FdF.dir/get_next_line.c.o"
   "/nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_atoi.c" "/nfs/2016/i/itsuman/cursus_42/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/ft_atoi.c.o"
   "/nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_atoi_base.c" "/nfs/2016/i/itsuman/cursus_42/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/ft_atoi_base.c.o"
   "/nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_strchr.c" "/nfs/2016/i/itsuman/cursus_42/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/ft_strchr.c.o"
+  "/nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_strcpy.c" "/nfs/2016/i/itsuman/cursus_42/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/ft_strcpy.c.o"
   "/nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_strdel.c" "/nfs/2016/i/itsuman/cursus_42/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/ft_strdel.c.o"
   "/nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_strdup.c" "/nfs/2016/i/itsuman/cursus_42/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/ft_strdup.c.o"
   "/nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_strjoin.c" "/nfs/2016/i/itsuman/cursus_42/FdF/cmake-build-debug/CMakeFiles/FdF.dir/libft/ft_strjoin.c.o"

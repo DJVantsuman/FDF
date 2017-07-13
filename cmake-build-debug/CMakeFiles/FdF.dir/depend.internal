@@ -9,6 +9,10 @@ CMakeFiles/FdF.dir/create_image.c.o
  /nfs/2016/i/itsuman/cursus_42/FdF/create_image.c
  /nfs/2016/i/itsuman/cursus_42/FdF/fdf.h
  /nfs/2016/i/itsuman/cursus_42/FdF/libft/libft.h
+CMakeFiles/FdF.dir/get_color.c.o
+ /nfs/2016/i/itsuman/cursus_42/FdF/fdf.h
+ /nfs/2016/i/itsuman/cursus_42/FdF/get_color.c
+ /nfs/2016/i/itsuman/cursus_42/FdF/libft/libft.h
 CMakeFiles/FdF.dir/get_next_line.c.o
  /nfs/2016/i/itsuman/cursus_42/FdF/get_next_line.c
  /nfs/2016/i/itsuman/cursus_42/FdF/get_next_line.h
@@ -20,6 +24,8 @@ CMakeFiles/FdF.dir/libft/ft_atoi_base.c.o
  /nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_atoi_base.c
 CMakeFiles/FdF.dir/libft/ft_strchr.c.o
  /nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_strchr.c
+CMakeFiles/FdF.dir/libft/ft_strcpy.c.o
+ /nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_strcpy.c
 CMakeFiles/FdF.dir/libft/ft_strdel.c.o
  /nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_strdel.c
 CMakeFiles/FdF.dir/libft/ft_strdup.c.o

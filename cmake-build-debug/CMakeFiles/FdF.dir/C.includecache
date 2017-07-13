@@ -30,6 +30,10 @@ fcntl.h
 libft/libft.h
 /nfs/2016/i/itsuman/cursus_42/FdF/libft/libft.h
 
+/nfs/2016/i/itsuman/cursus_42/FdF/get_color.c
+fdf.h
+/nfs/2016/i/itsuman/cursus_42/FdF/fdf.h
+
 /nfs/2016/i/itsuman/cursus_42/FdF/get_next_line.c
 get_next_line.h
 /nfs/2016/i/itsuman/cursus_42/FdF/get_next_line.h
@@ -51,6 +55,8 @@ libft.h
 /nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_atoi_base.c
 
 /nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_strchr.c
+
+/nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_strcpy.c
 
 /nfs/2016/i/itsuman/cursus_42/FdF/libft/ft_strdel.c
 stdlib.h
