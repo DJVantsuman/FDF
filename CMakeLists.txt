@@ -15,6 +15,6 @@ set(SOURCE_FILES
         libft/ft_strsub.c
         libft/ft_atoi.c
         libft/ft_strcpy.c
-        libft/ft_atoi_base.c write_line.c create_image.c create_3dmap.c get_color.c)
+        libft/ft_atoi_base.c write_line.c create_image.c create_3dmap.c get_color.c revers_coordinate.c)
 
 add_executable(FdF ${SOURCE_FILES} libft/ft_atoi_base.c write_line.c create_image.c)

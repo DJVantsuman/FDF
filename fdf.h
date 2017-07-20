@@ -14,12 +14,12 @@
 # define _FDF_H_
 
 #define LX  800
-#define LY  700
+#define LY  1000
 #define T   100
-#define Z   3
-#define AX  25
-#define AY  20
-#define AZ  15
+#define Z   4
+#define AX  35
+#define AY  10
+#define AZ  0
 
 # include <mlx.h>
 # include <stdlib.h>
@@ -54,6 +54,7 @@ int             leght_map(char **map, char f);
 void             get_color(char *color, t_pixel *pixel);
 
 void            create_image(t_pixel **pixel, char **map);
+void            revers_coordinate(t_pixel ***p_map, int lx, int ly);
 void            create_3dmap(t_pixel ***p_map, char **map);
 void            write_line(t_pixel *start, t_pixel *end, t_win wind);
 

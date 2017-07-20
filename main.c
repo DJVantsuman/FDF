@@ -6,7 +6,7 @@
 /*   By: itsuman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/20 14:50:46 by itsuman           #+#    #+#             */
-/*   Updated: 2017/05/20 16:02:33 by itsuman          ###   ########.fr       */
+/*   Updated: 2017/07/20 11:32:27 by itsuman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ void    get_pixel_color(char *s, t_pixel *pixel)
         i++;
     if (s[i] == ' ' || s[i] == '\0')
     {
-        pixel->col_R = 0;
-        pixel->col_G = 0;
-        pixel->col_B = 0;
+        pixel->col_R = 255;
+        pixel->col_G = 255;
+        pixel->col_B = 255;
         return ;
     }
     i++;
@@ -56,9 +56,8 @@ void    create_struct(t_pixel **pixel, char **map, int i, int t)
             pixel[t] = (t_pixel *)malloc(sizeof(t_pixel));
             pixel[t]->x = x;
             pixel[t]->y = i;
-            pixel[t]->z = -ft_atoi(map[i] + j) * Z;
+            pixel[t]->z = -ft_atoi(map[i] + j);
             get_pixel_color(map[i] + j, pixel[t]);
-//            pixel[t]->color = get_pixel_color(map[i] + j);
             x++;
             t++;
             while (map[i][j] != ' ' && map[i][j] != '\0')

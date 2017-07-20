@@ -39,27 +39,32 @@ int     leght_map(char **map, char f)
     return (count);
 }
 
-void    scalling(t_pixel **pixel, char **map)
+void    scalling(t_pixel ***p_map, int lx, int ly)
 {
-    int lx;
-    int ly;
-    double n;
-    int i;
+    int x;
+    int y;
+    int dx;
+    int dy;
+    int s;
 
-    lx = leght_map(map, 'x');
-    ly = leght_map(map, 'y');
-    if (lx > ly)
-        n = (LX / 2 - T) / (lx / 2);
-    else
+    y = 0;
+    dx = LX / 2;
+    dy = LY / 2;
+    s = LX / lx;
+    if (s > 10)
+        s -= 10;
+    else if (s > 1)
+        s -= 1;
+    while (y < ly)
     {
-        n = (LX / 2 - T) / (lx / 2);
-    }
-    i = 0;
-    while (pixel[i])
-    {
-        pixel[i]->x = pixel[i]->x * n + T;
-        pixel[i]->y = pixel[i]->y * n + T;
-        i++;
+        x = 0;
+        while (x < lx)
+        {
+            p_map[y][x]->x = (p_map[y][x]->x * s) + dx;
+            p_map[y][x]->y = (p_map[y][x]->y * s) + dy;
+            x++;
+        }
+        y++;
     }
 }
 
@@ -110,6 +115,8 @@ void    create_pixel_map(t_pixel **pixel, t_pixel ***p_map, t_win wind, char **m
         }
         i++;
     }
+    revers_coordinate(p_map, lx, leght_map(map, 'y'));
+    scalling(p_map, lx, leght_map(map, 'y'));
     create_3dmap(p_map, map);
     draw(p_map, wind, map);
     mlx_loop(wind.mlx);
@@ -127,6 +134,5 @@ void    create_image(t_pixel **pixel, char **map)
     win = mlx_new_window(mlx, LX , LY, "fdf");
     wind.mlx = mlx;
     wind.win = win;
-    scalling(pixel, map);
     create_pixel_map(pixel, p_map, wind, map);
 }

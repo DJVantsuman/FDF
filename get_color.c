@@ -86,7 +86,11 @@ void     get_color(char *color, t_pixel *pixel)
     size_t  l;
 
     l = ft_strlen(color);
-    pixel->col_R = ft_atoi_base(get_B(color, l), 16);
-    pixel->col_G = ft_atoi_base(get_G(color, l), 16);
-    pixel->col_B = ft_atoi_base(get_R(color, l), 16);
+    if (l > 0)
+    {
+        pixel->col_R = ft_atoi_base(get_B(color, l), 16);
+        pixel->col_G = ft_atoi_base(get_G(color, l), 16);
+        pixel->col_B = ft_atoi_base(get_R(color, l), 16);
+
+    }
 }

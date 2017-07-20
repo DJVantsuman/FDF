@@ -47,6 +47,10 @@ CMakeFiles/FdF.dir/main.c.o: ../fdf.h
 CMakeFiles/FdF.dir/main.c.o: ../libft/libft.h
 CMakeFiles/FdF.dir/main.c.o: ../main.c
 
+CMakeFiles/FdF.dir/revers_coordinate.c.o: ../fdf.h
+CMakeFiles/FdF.dir/revers_coordinate.c.o: ../libft/libft.h
+CMakeFiles/FdF.dir/revers_coordinate.c.o: ../revers_coordinate.c
+
 CMakeFiles/FdF.dir/write_line.c.o: ../fdf.h
 CMakeFiles/FdF.dir/write_line.c.o: ../libft/libft.h
 CMakeFiles/FdF.dir/write_line.c.o: ../write_line.c

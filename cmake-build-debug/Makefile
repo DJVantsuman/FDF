@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /nfs/2016/i/itsuman/cursus_42/FdF
+CMAKE_SOURCE_DIR = /nfs/2016/i/itsuman/projects/fdf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /nfs/2016/i/itsuman/cursus_42/FdF/cmake-build-debug
+CMAKE_BINARY_DIR = /nfs/2016/i/itsuman/projects/fdf/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/i/itsuman/cursus_42/FdF/cmake-build-debug/CMakeFiles /nfs/2016/i/itsuman/cursus_42/FdF/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/i/itsuman/projects/fdf/cmake-build-debug/CMakeFiles /nfs/2016/i/itsuman/projects/fdf/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/i/itsuman/cursus_42/FdF/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/2016/i/itsuman/projects/fdf/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -528,6 +528,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/main.c.s
 .PHONY : main.c.s
 
+revers_coordinate.o: revers_coordinate.c.o
+
+.PHONY : revers_coordinate.o
+
+# target to build an object file
+revers_coordinate.c.o:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/revers_coordinate.c.o
+.PHONY : revers_coordinate.c.o
+
+revers_coordinate.i: revers_coordinate.c.i
+
+.PHONY : revers_coordinate.i
+
+# target to preprocess a source file
+revers_coordinate.c.i:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/revers_coordinate.c.i
+.PHONY : revers_coordinate.c.i
+
+revers_coordinate.s: revers_coordinate.c.s
+
+.PHONY : revers_coordinate.s
+
+# target to generate assembly for a file
+revers_coordinate.c.s:
+	$(MAKE) -f CMakeFiles/FdF.dir/build.make CMakeFiles/FdF.dir/revers_coordinate.c.s
+.PHONY : revers_coordinate.c.s
+
 write_line.o: write_line.c.o
 
 .PHONY : write_line.o
@@ -609,6 +636,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... revers_coordinate.o"
+	@echo "... revers_coordinate.i"
+	@echo "... revers_coordinate.s"
 	@echo "... write_line.o"
 	@echo "... write_line.i"
 	@echo "... write_line.s"

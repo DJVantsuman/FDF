@@ -14,7 +14,7 @@ static int	ft_inbase(char c, int base)
 {
     if (base <= 10)
         return (c >= '0' && c <= '9');
-    return ((c >= '0' && c <= '9') || (c >= 'A' && c <= ('A' + base - 10)));
+    return ((c >= '0' && c <= '9') || (c >= 'A' && c <= ('A' + base - 10)) || (c >= 'a' && c <= ('a' + base - 10)));
 }
 
 int	ft_atoi_base(char *str, int base)
@@ -30,8 +30,10 @@ int	ft_atoi_base(char *str, int base)
         str++;
     while (ft_inbase(*str, base))
     {
-        if (*str - 'A' >= 0)
+        if ((*str > 64 && *str < 91) && *str - 'A' >= 0)
             value = value * base + (*str - 'A' + 10);
+        else if ((*str > 96 && *str < 123) && *str - 'a' >= 0)
+            value = value * base + (*str - 'a' + 10);
         else
             value = value * base + (*str - '0');
         str++;
