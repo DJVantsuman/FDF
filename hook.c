@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_color.c                                        :+:      :+:    :+:   */
+/*   hook.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itsuman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/13 19:38:40 by itsuman           #+#    #+#             */
-/*   Updated: 2017/07/23 14:49:24 by itsuman          ###   ########.fr       */
+/*   Created: 2017/07/22 20:04:57 by itsuman           #+#    #+#             */
+/*   Updated: 2017/07/23 14:51:35 by itsuman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-void	get_color(char *color, t_pixel *pixel)
+int		exit_x(void *par)
 {
-	size_t	l;
+	par = NULL;
+	exit(1);
+	return (0);
+}
 
-	l = ft_strlen(color);
-	if (l == 2 || l == 4 || l == 6)
-		pixel->color = ft_atoi_base(color, 16);
-	else if (l == 0)
-		pixel->color = 16777215;
-	else
-	{
-		write(2, "\nWrong color\n", 13);
-		exit(2);
-	}
+int		key_hook(int keycode, void *param)
+{
+	param = NULL;
+	if (keycode == 53)
+		exit(1);
+	return (0);
+}
+
+void	my_hook(t_win wind)
+{
+	mlx_hook(wind.win, 17, 1L << 17, exit_x, 0);
+	mlx_key_hook(wind.win, key_hook, 0);
 }

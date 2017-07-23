@@ -10,28 +10,30 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	FdF
-FLAGS = -Wall -Werror -Wextra
+NAME =	fdf
 SRC = main.c get_next_line.c create_image.c write_line.c create_3dmap.c \
-get_color.c revers_coordinate.c
-OSRC =	$(SRC:.c=.o)
+get_color.c revers_coordinate.c hook.c check.c check_z.c
+LIB=libft/libft.a
+HEADER=fdf.h
+FRAMEWORKS=-framework OpenGL -framework AppKit
+FLAGS=-c -Wall -Wextra -Werror
+OBJECTS=$(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OSRC)
-	make -C libft
-	gcc -o $(NAME) $(FLAGS) $(OSRC) libft/libft.a
-	make clean
+$(NAME):$(OBJECTS)
+	make -C libft/
+	gcc -o $(NAME) $(OBJECTS) -L. $(LIB) -lmlx $(FRAMEWORKS)
 
-%.o: %.c
-	gcc -g $(FLAGS) -c -o $@ $<
+%.o:%.c $(HEADER)
+	gcc $(FLAGS) -o $@ $<
 
 clean:
-	make clean -C libft
-	rm -f $(OSRC)
+	make -C libft/ clean
+	rm -Rf $(OBJECTS)
 
 fclean: clean
-	make fclean -C libft
-	rm -f $(NAME)
+	make -C libft/ fclean
+	rm -Rf $(NAME)
 
 re: fclean all
