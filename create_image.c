@@ -6,7 +6,7 @@
 /*   By: itsuman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/20 14:50:46 by itsuman           #+#    #+#             */
-/*   Updated: 2017/07/23 14:33:58 by itsuman          ###   ########.fr       */
+/*   Updated: 2017/07/23 18:27:15 by itsuman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,9 @@ void	draw(t_pixel ***p_map, t_win wind, char **map)
 	i = 0;
 	lx = leght_map(map, 'x');
 	ly = leght_map(map, 'y');
+	if (lx == 1 && ly == 1)
+		mlx_pixel_put(wind.mlx, wind.win, p_map[0][0]->x, p_map[0][0]->y,
+				p_map[0][0]->color);
 	while (i < ly)
 	{
 		j = 0;
